@@ -3,10 +3,11 @@ import time
 import random
 import screen
 
+
 def generate_word():
     with open("wordlist.txt") as f:
         lines = f.readlines()
-        return lines[random.randint(0, len(lines) - 1)]
+        return random.choice(lines)
 
 
 def parseInput(letters_tried):
@@ -34,7 +35,7 @@ def checkInput(user_input, word, word_state):
 
 def gameEnd(lives, word):
     if lives == 0:
-        print("Unlucky you ran out of lives, the word was " + word)
+        print(f"Unlucky you ran out of lives, the word was \'{word}\'")
     else:
         print(f"You guessed the word \'{word}\', congrats")
 
