@@ -1,5 +1,3 @@
-import os
-import time
 import random
 import screen
 
@@ -7,7 +5,7 @@ import screen
 def generate_word():
     with open("wordlist.txt") as f:
         lines = f.readlines()
-        return random.choice(lines)
+        return random.choice(lines).strip()
 
 
 def parseInput(letters_tried):
@@ -44,7 +42,7 @@ def gameLoop():
     lives = 6
     letters_tried = list()
     word = generate_word()
-    word_state = ['_'] * (len(word) - 1)
+    word_state = ['_'] * len(word)
     while lives > 0:
         screen.drawUI(word_state, lives, letters_tried)
         user_input = parseInput(letters_tried)

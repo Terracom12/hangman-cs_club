@@ -27,7 +27,7 @@ def drawWord(word_state):
         print(l, end=" ")
     print("\n")
 
-#def drawLetters(letters_tried):
+# def drawLetters(letters_tried):
 #    print("Tried Letters:")
 #    i = 0
 #    while i < 26:
@@ -39,7 +39,7 @@ def drawWord(word_state):
 def drawLetters(letters_tried):
     print("Letters Tried:")
     for l in letters_tried:
-        print(l, end = " ")
+        print(l, end=" ")
     print()
 
 #for i in range(0, 7):
